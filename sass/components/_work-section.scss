@@ -1,0 +1,41 @@
+.section-work {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.work-list {
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  /* gap: 30px; так лучше, но сделаю через чайлд*/
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--white-color);
+    background-color: var(--dark-black-color-opacity);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+
+    text-transform: uppercase;
+
+    width: 100%;
+    text-align: center;
+
+    padding: 27px;
+  }
+}

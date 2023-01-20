@@ -1,0 +1,44 @@
+.constant-clients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    margin-top: 50px;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 30px) / 2);
+
+    min-height: 92px;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 150px) / 6);
+    }
+  }
+
+  &__link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--light-grey);
+    border-radius: 4px;
+    fill: var(--light-grey);
+
+    transition-property: fill, border;
+
+    &:hover,
+    &:focus {
+      border: 1px solid var(--accent-color);
+      fill: var(--accent-color);
+    }
+  }
+}

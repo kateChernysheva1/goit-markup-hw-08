@@ -1,0 +1,26 @@
+:root {
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+  
+    --accent-color: #2196f3;
+    --white-color: #ffffff;
+  
+    --white-color-opacity: rgba(255, 255, 255, 0.6);
+    --dark-black-color-opacity: rgba(47, 48, 58, 0.8);
+    --light-black-color-opacity: rgba(0, 0, 0, 0.2);
+    --blue-color-opacity: rgba(33, 150, 243, 0.9);
+  
+    --primary-bg-color: #2f303a;
+    --secondary-bg-color: #f5f4fa;
+  
+    --shadow-black: rgba(0, 0, 0, 0.15);
+  
+    --light-grey: #afb1b8;
+    --light-black: rgba(255, 255, 255, 0.1);
+  
+    --time-transition: 250ms;
+    --basic-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* покажу на одной переменной как работает*/
+  $black-color: #000;

@@ -1,0 +1,253 @@
+header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-grow: 1;
+  }
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    min-height: 59px;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $black-color;
+
+  & span {
+    color: var(--accent-color);
+  }
+}
+
+.list-header {
+  display: none;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+
+  & a:hover,
+  & a:focus {
+    color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.site-nav {
+  margin-left: 93px;
+  gap: 50px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    min-height: 79px;
+  }
+
+  &__link {
+    transition-property: color;
+  }
+
+  &__item--current {
+    position: relative;
+
+    color: var(--accent-color);
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+      width: 100%;
+      height: 4px;
+      left: 0;
+      bottom: -1px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    position: relative;
+    left: -8px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.auth-nav {
+  color: var(--secondary-text-color);
+  margin-left: auto;
+  gap: 30px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    fill: var(--secondary-text-color);
+
+    transition-property: fill, color;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    fill: var(--accent-color);
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+.button-mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.close-mobile-menu {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+
+  min-width: 40px;
+  height: 40px;
+
+  transition: fill var(--time-transition) var(--basic-function);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.menu-mobile {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate(100%, 0);
+  z-index: 2;
+
+  min-height: 100vh;
+  width: 100%;
+  overflow: auto;
+
+  transition: transform var(--time-transition) var(--basic-function);
+  background-color: var(--white-color);
+  padding: 48px 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  &.is-open {
+    transform: translate(0, 0);
+  }
+
+  &-list {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+
+    &__link {
+      &--current,
+      &:hover,
+      &:focus {
+        color: var(--accent-color);
+      }
+    }
+
+    &__item {
+      margin-bottom: 36px;
+    }
+  }
+}
+
+.mobile-menu-contacts {
+  margin: auto 0 64px;
+
+  &__tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+    margin-bottom: 36px;
+  }
+
+  &__mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    color: var(--secondary-text-color);
+  }
+}
+
+.mobile-menu-socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__item {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+    &:last-child {
+      border-right: 0;
+      padding-right: 0;
+      margin-right: 0;
+    }
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: var(--accent-color);
+  }
+}

@@ -1,0 +1,129 @@
+footer {
+  background-color: var(--primary-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.address-block__logo {
+  margin-bottom: 20px;
+  display: inline-block;
+
+  color: var(--white-color);
+}
+
+.footer-list {
+  &__link {
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--white-color-opacity);
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.address {
+  color: var(--white-color);
+}
+
+.address-block {
+  max-width: 231px;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 60px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 70px;
+    text-align: left;
+  }
+}
+
+.connect-block__title,
+.subscribe-block__title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.connect-block .list-links__link:not(:hover) {
+  fill: var(--white-color);
+  background-color: var(--light-black);
+}
+
+.subscribe-block {
+  flex-grow: 1;
+  width: 100%;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 23px;
+  }
+}
+
+.form-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+
+  &__input {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: inherit;
+
+    max-width: 450px;
+    width: 100%;
+    padding: 14px 16px;
+    outline: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--white-color);
+
+    & ::placeholder {
+      color: var(--white-color-opacity);
+    }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 358px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding-left: 28px;
+    padding-right: 28px;
+
+    fill: var(--white-color);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 12px;
+  }
+}
